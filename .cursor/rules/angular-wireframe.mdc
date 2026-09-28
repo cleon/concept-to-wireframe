@@ -1,0 +1,13 @@
+---
+description: Standalone Angular wireframe conventions
+alwaysApply: true
+---
+
+# Angular wireframe
+
+- Current supported Angular, **standalone** components, no NgModule app shell.
+- Routes: `/portfolio`, `/projects/:id`, `/projects/:id/:domain` (`schedule|cost|safety|change`), plus issue/driver detail.
+- Client-side state only (signals are preferred). `needsSteer` and review flags are in-memory.
+- Accessibility baseline: semantic headings, labeled filters, visible `:focus-visible`, keyboard-reachable primary actions.
+- `ng build` must succeed. `npm start` / `ng serve` is the preview path for Cloud Agents.
+- Keep fixtures aligned with `docs/inputs/05-mock-data-contracts.md`.
