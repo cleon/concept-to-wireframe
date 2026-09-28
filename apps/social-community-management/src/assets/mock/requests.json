@@ -1,0 +1,21 @@
+[
+  {
+    "id": "req-dark-mode-open",
+    "postId": "post-dark-mode",
+    "title": "Dark mode theme",
+    "summary": "Fans requesting system dark theme across web app.",
+    "duplicateHint": "Similar threads in Sept mock digest.",
+    "status": "decided",
+    "submittedAt": "2026-09-27T10:30:00Z",
+    "correlation": {
+      "signalId": null,
+      "relation": "not-related",
+      "scoutNote": "EXAMPLE — No infra correlation required; UX-only ask."
+    },
+    "decision": {
+      "outcome": "defer",
+      "fanReason": "EXAMPLE — On the roadmap for a future release; we will post an update in the community digest.",
+      "decidedAt": "2026-09-27T15:00:00Z"
+    }
+  }
+]

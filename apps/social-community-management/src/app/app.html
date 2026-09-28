@@ -1,0 +1,27 @@
+<app-demo-banner />
+
+<div class="shell">
+  <header class="app-bar">
+    <a routerLink="/signals" class="brand">Social Community Management</a>
+    <nav aria-label="Primary">
+      <a routerLink="/signals" routerLinkActive="active">Signals</a>
+      <a routerLink="/decisions" routerLinkActive="active">Decisions</a>
+    </nav>
+    <div class="role-switcher" aria-label="Session role (does not persist)">
+      <span class="role-label">Role:</span>
+      @for (role of roles; track role) {
+        <button
+          type="button"
+          class="role-btn"
+          [class.active]="store.role() === role"
+          (click)="setRole(role)"
+        >
+          {{ roleLabel(role) }}
+        </button>
+      }
+    </div>
+  </header>
+  <main>
+    <router-outlet />
+  </main>
+</div>

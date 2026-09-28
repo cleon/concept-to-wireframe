@@ -1,0 +1,24 @@
+.role-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 12px;
+}
+
+.role-label {
+  color: var(--muted);
+}
+
+.role-btn {
+  border: 1px solid var(--line);
+  background: var(--card);
+  padding: 0.2rem 0.45rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.role-btn.active {
+  border-color: var(--accent);
+  background: var(--card-02);
+}

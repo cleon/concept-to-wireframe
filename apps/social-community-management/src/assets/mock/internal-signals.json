@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sig-auth-downtime-resolved",
+    "type": "downtime",
+    "windowStart": "2026-09-27T22:00:00Z",
+    "windowEnd": "2026-09-27T23:15:00Z",
+    "resolved": true,
+    "summary": "EXAMPLE — Auth gateway brownout; elevated 504s during maintenance rollback."
+  },
+  {
+    "id": "sig-login-errors-ongoing",
+    "type": "error_spike",
+    "windowStart": "2026-09-28T10:00:00Z",
+    "windowEnd": null,
+    "resolved": false,
+    "summary": "EXAMPLE — Session refresh failures still above baseline in us-east (mock metric)."
+  },
+  {
+    "id": "sig-no-match-hint",
+    "type": "deployment",
+    "windowStart": "2026-09-20T16:00:00Z",
+    "windowEnd": "2026-09-20T16:05:00Z",
+    "resolved": true,
+    "summary": "EXAMPLE — Routine config deploy; no customer-facing impact recorded."
+  }
+]

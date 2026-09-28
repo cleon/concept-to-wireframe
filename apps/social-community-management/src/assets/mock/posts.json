@@ -1,0 +1,57 @@
+[
+  {
+    "id": "post-bulk-export",
+    "channel": "X (mock)",
+    "authorHandle": "EXAMPLE — fan_dev_42",
+    "postedAt": "2026-09-28T14:10:00Z",
+    "quote": "We need bulk CSV export from the analytics dashboard. Copy-paste one row at a time is killing us.",
+    "sentiment": "frustrated",
+    "threadSnippets": [
+      "EXAMPLE — pm_watcher: +1, our team asked for this in Q2.",
+      "EXAMPLE — fan_dev_42: Happy to beta test if you ship it."
+    ],
+    "triageStatus": "new",
+    "linkedRequestId": null,
+    "duplicateOfRequestId": null
+  },
+  {
+    "id": "post-dark-mode",
+    "channel": "X (mock)",
+    "authorHandle": "EXAMPLE — ui_fan",
+    "postedAt": "2026-09-27T09:00:00Z",
+    "quote": "Dark mode when?? Every other tool has it.",
+    "sentiment": "impatient",
+    "threadSnippets": ["EXAMPLE — ui_fan: Seriously considering switching."],
+    "triageStatus": "routed",
+    "linkedRequestId": "req-dark-mode-open",
+    "duplicateOfRequestId": "req-dark-mode-open"
+  },
+  {
+    "id": "post-login-timeout",
+    "channel": "X (mock)",
+    "authorHandle": "EXAMPLE — ops_gamer",
+    "postedAt": "2026-09-28T11:30:00Z",
+    "quote": "Login still timing out every hour. Fix the auth bug already.",
+    "sentiment": "angry",
+    "threadSnippets": [
+      "EXAMPLE — ops_gamer: Started after yesterday's maintenance window.",
+      "EXAMPLE — support_bot_mock: We are looking into it (automated reply)."
+    ],
+    "triageStatus": "new",
+    "linkedRequestId": null,
+    "duplicateOfRequestId": null,
+    "suggestedSignalIds": ["sig-auth-downtime-resolved", "sig-login-errors-ongoing"]
+  },
+  {
+    "id": "post-spam-meme",
+    "channel": "X (mock)",
+    "authorHandle": "EXAMPLE — random_poster",
+    "postedAt": "2026-09-28T08:00:00Z",
+    "quote": "lol your logo looks like a potato 🥔",
+    "sentiment": "neutral",
+    "threadSnippets": [],
+    "triageStatus": "new",
+    "linkedRequestId": null,
+    "duplicateOfRequestId": null
+  }
+]
