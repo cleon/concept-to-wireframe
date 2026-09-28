@@ -4,6 +4,8 @@ Clickable **Angular** hub for a construction portfolio morning scan. Fictional p
 
 This repo is the worked example of **intake docs → Cloud Agent → reviewable wireframe**. Humans operate from Agents Window / [cursor.com/agents](https://cursor.com/agents) / [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
 
+**First prompt:** paste the block in [`docs/prompts/00-main-intake.md`](docs/prompts/00-main-intake.md) (or `@` that file). See [`docs/prompts/`](docs/prompts/). Mock/stub only.
+
 ## What this demo proves
 
 1. Filled `docs/inputs/` become journeys J1–J3 without live integrations.
@@ -46,6 +48,7 @@ Deep-link for the Cost Lead path (J3): `/projects/northridge-hospital/cost`.
 
 ## Docs
 
+- First-run intake prompt: [`docs/prompts/00-main-intake.md`](docs/prompts/00-main-intake.md)
 - Intake package: [`docs/inputs/`](docs/inputs/)
 - Cursor components (rules / skills / hooks / Automations): [`docs/10-cursor-components-for-repeatable-prototypes.md`](docs/10-cursor-components-for-repeatable-prototypes.md)
 - Agent playbook: [`AGENTS.md`](AGENTS.md)

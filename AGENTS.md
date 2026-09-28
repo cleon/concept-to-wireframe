@@ -4,6 +4,8 @@ This repository is a **mock-data Angular wireframe** for a construction portfoli
 
 Humans dispatch work from **Agents Window**, [cursor.com/agents](https://cursor.com/agents), and [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required for the eval narrative.
 
+**First prompt:** paste (or `@`) [`docs/prompts/00-main-intake.md`](docs/prompts/00-main-intake.md). Mock/stub only — no live APIs or secrets.
+
 ## Non-negotiables
 
 - Mock/stub data only — no live APIs, secrets, or production URLs
@@ -26,6 +28,7 @@ npm start
 
 | Path | Role |
 | --- | --- |
+| `docs/prompts/00-main-intake.md` | First prompt to run in Agents Window / Cloud Agents |
 | `docs/inputs/` | Example customer intake (concept, personas, J1–J3, IA, contracts) |
 | `docs/automations/` | Paste-ready Automation prompts (PR review, daily digest, Slack triage) |
 | `docs/10-cursor-components-for-repeatable-prototypes.md` | Rules / skills / hooks / Automations pattern |
