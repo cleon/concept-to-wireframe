@@ -1,0 +1,18 @@
+---
+description: Keep docs/inputs in sync when journeys or scope change
+alwaysApply: true
+---
+
+# Docs sync
+
+When you change journeys, IA, mock contracts, or prototype scope, update the matching file under `docs/inputs/` in the same PR when practical.
+
+| Change | Update |
+| --- | --- |
+| New / dropped journey | `03-priority-journeys.md` |
+| Screen or nav change | `04-ia-and-screens.md` |
+| Fixture shape | `05-mock-data-contracts.md` |
+| New feasibility finding | `08-feasibility-questions.md` |
+| Success bar change | `09-success-metrics.md` |
+
+Do not silently promote deferred journeys (J4–J6) into the running app. Non-goals in `01-concept-brief.md` still apply.

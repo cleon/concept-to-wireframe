@@ -1,0 +1,263 @@
+[
+  {
+    "id": "riverbend-interchange",
+    "name": "EXAMPLE — Riverbend Interchange",
+    "region": "West",
+    "businessUnit": "Civil",
+    "health": "red",
+    "scheduleIndex": 0.78,
+    "costIndex": 0.82,
+    "criticalIssueCount": 4,
+    "lastUpdated": "2026-09-28T06:15:00Z",
+    "narrative": "SPI 0.78 after an 18-day utility relocation slip. CPI 0.82 with contingency 61% drawn and two unsigned owner COs. Decide today whether this enters Thursday steer.",
+    "needsSteer": false,
+    "drivers": [
+      {
+        "domain": "schedule",
+        "severity": "critical",
+        "summary": "Utility relocation slipped 18 days; night-shift recovery is behind plan."
+      },
+      {
+        "domain": "cost",
+        "severity": "high",
+        "summary": "Contingency 61% drawn; CO-014 and CO-019 unsigned."
+      },
+      {
+        "domain": "change",
+        "severity": "high",
+        "summary": "Owner delay package stuck in commercial review."
+      }
+    ],
+    "domainKpis": {
+      "schedule": { "spi": 0.78, "daysVariance": -18, "criticalPathItems": 6 },
+      "cost": { "cpi": 0.82, "contingencyDrawnPct": 61, "eacVarianceUsd": -4200000 },
+      "safety": { "trir": 1.1, "recordables14d": 0, "openActions": 2 },
+      "change": { "openCount": 7, "pendingValueUsd": 3100000, "avgAgeDays": 19 }
+    }
+  },
+  {
+    "id": "harbor-point-terminal",
+    "name": "EXAMPLE — Harbor Point Terminal",
+    "region": "Coastal",
+    "businessUnit": "Marine",
+    "health": "red",
+    "scheduleIndex": 0.85,
+    "costIndex": 0.96,
+    "criticalIssueCount": 3,
+    "lastUpdated": "2026-09-28T05:40:00Z",
+    "narrative": "Three recordables in 14 days plus an exclusion-zone near-miss. Crane-barge weather window missed. Safety lead should decide on a stop-work conversation today.",
+    "needsSteer": true,
+    "drivers": [
+      {
+        "domain": "safety",
+        "severity": "critical",
+        "summary": "Recordable trend 3 in 14 days; exclusion-zone near-miss yesterday."
+      },
+      {
+        "domain": "schedule",
+        "severity": "high",
+        "summary": "Pile-driving delayed after missed barge weather window."
+      }
+    ],
+    "domainKpis": {
+      "schedule": { "spi": 0.85, "daysVariance": -9, "criticalPathItems": 4 },
+      "cost": { "cpi": 0.96, "contingencyDrawnPct": 28, "eacVarianceUsd": -800000 },
+      "safety": { "trir": 3.4, "recordables14d": 3, "openActions": 8 },
+      "change": { "openCount": 2, "pendingValueUsd": 450000, "avgAgeDays": 8 }
+    }
+  },
+  {
+    "id": "northridge-hospital",
+    "name": "EXAMPLE — Northridge Hospital Wing",
+    "region": "Central",
+    "businessUnit": "Healthcare",
+    "health": "amber",
+    "scheduleIndex": 0.97,
+    "costIndex": 0.88,
+    "criticalIssueCount": 1,
+    "lastUpdated": "2026-09-27T21:05:00Z",
+    "narrative": "Schedule is holding. Cost story is not: contingency draw needs a Cost Lead review before the PM treats it as settled.",
+    "needsSteer": false,
+    "drivers": [
+      {
+        "domain": "cost",
+        "severity": "high",
+        "summary": "Contingency draw pending approval; EAC variance −$1.6M."
+      }
+    ],
+    "domainKpis": {
+      "schedule": { "spi": 0.97, "daysVariance": -3, "criticalPathItems": 2 },
+      "cost": { "cpi": 0.88, "contingencyDrawnPct": 47, "eacVarianceUsd": -1600000 },
+      "safety": { "trir": 0.6, "recordables14d": 0, "openActions": 1 },
+      "change": { "openCount": 4, "pendingValueUsd": 920000, "avgAgeDays": 12 }
+    }
+  },
+  {
+    "id": "oak-valley-dc",
+    "name": "EXAMPLE — Oak Valley Data Center",
+    "region": "West",
+    "businessUnit": "Industrial",
+    "health": "amber",
+    "scheduleIndex": 0.91,
+    "costIndex": 1.02,
+    "criticalIssueCount": 1,
+    "lastUpdated": "2026-09-28T04:10:00Z",
+    "narrative": "Cost is healthy. Switchgear long-lead is the schedule risk — confirm whether to resequence commissioning or accept the slip.",
+    "needsSteer": false,
+    "drivers": [
+      {
+        "domain": "schedule",
+        "severity": "medium",
+        "summary": "Switchgear long-lead threatens commissioning window."
+      },
+      {
+        "domain": "change",
+        "severity": "low",
+        "summary": "Owner-requested cooling upgrade still in pricing."
+      }
+    ],
+    "domainKpis": {
+      "schedule": { "spi": 0.91, "daysVariance": -11, "criticalPathItems": 3 },
+      "cost": { "cpi": 1.02, "contingencyDrawnPct": 18, "eacVarianceUsd": 400000 },
+      "safety": { "trir": 0.4, "recordables14d": 0, "openActions": 0 },
+      "change": { "openCount": 3, "pendingValueUsd": 1100000, "avgAgeDays": 6 }
+    }
+  },
+  {
+    "id": "midtown-transit",
+    "name": "EXAMPLE — Midtown Transit Hub",
+    "region": "Central",
+    "businessUnit": "Transit",
+    "health": "amber",
+    "scheduleIndex": 0.94,
+    "costIndex": 0.99,
+    "criticalIssueCount": 2,
+    "lastUpdated": "2026-09-27T18:30:00Z",
+    "narrative": "Third-party interface (rail operator) is the watch item. Cost is stable; do not let interface lag become a red schedule surprise.",
+    "needsSteer": false,
+    "drivers": [
+      {
+        "domain": "change",
+        "severity": "medium",
+        "summary": "Rail-operator interface package unsigned."
+      },
+      {
+        "domain": "schedule",
+        "severity": "low",
+        "summary": "Night possession windows shortened next month."
+      }
+    ],
+    "domainKpis": {
+      "schedule": { "spi": 0.94, "daysVariance": -6, "criticalPathItems": 3 },
+      "cost": { "cpi": 0.99, "contingencyDrawnPct": 22, "eacVarianceUsd": -250000 },
+      "safety": { "trir": 0.9, "recordables14d": 0, "openActions": 3 },
+      "change": { "openCount": 5, "pendingValueUsd": 1800000, "avgAgeDays": 14 }
+    }
+  },
+  {
+    "id": "summit-office",
+    "name": "EXAMPLE — Summit Office Tower",
+    "region": "Central",
+    "businessUnit": "Commercial",
+    "health": "green",
+    "scheduleIndex": 1.03,
+    "costIndex": 1.01,
+    "criticalIssueCount": 0,
+    "lastUpdated": "2026-09-26T16:00:00Z",
+    "narrative": "On plan. No executive attention this week unless a new driver appears.",
+    "needsSteer": false,
+    "drivers": [],
+    "domainKpis": {
+      "schedule": { "spi": 1.03, "daysVariance": 4, "criticalPathItems": 1 },
+      "cost": { "cpi": 1.01, "contingencyDrawnPct": 9, "eacVarianceUsd": 200000 },
+      "safety": { "trir": 0.3, "recordables14d": 0, "openActions": 0 },
+      "change": { "openCount": 1, "pendingValueUsd": 80000, "avgAgeDays": 3 }
+    }
+  },
+  {
+    "id": "pinecrest-warehouse",
+    "name": "EXAMPLE — Pinecrest Warehouse",
+    "region": "West",
+    "businessUnit": "Industrial",
+    "health": "green",
+    "scheduleIndex": 1.0,
+    "costIndex": 0.99,
+    "criticalIssueCount": 0,
+    "lastUpdated": "2026-09-27T12:20:00Z",
+    "narrative": "Stable. Use as a control when comparing red-project driver mix.",
+    "needsSteer": false,
+    "drivers": [],
+    "domainKpis": {
+      "schedule": { "spi": 1.0, "daysVariance": 0, "criticalPathItems": 1 },
+      "cost": { "cpi": 0.99, "contingencyDrawnPct": 12, "eacVarianceUsd": -90000 },
+      "safety": { "trir": 0.5, "recordables14d": 0, "openActions": 1 },
+      "change": { "openCount": 0, "pendingValueUsd": 0, "avgAgeDays": 0 }
+    }
+  },
+  {
+    "id": "eastgate-logistics",
+    "name": "EXAMPLE — Eastgate Logistics Park",
+    "region": "Coastal",
+    "businessUnit": "Industrial",
+    "health": "green",
+    "scheduleIndex": 1.05,
+    "costIndex": 1.04,
+    "criticalIssueCount": 0,
+    "lastUpdated": "2026-09-28T03:55:00Z",
+    "narrative": "Ahead on schedule and cost. No steer.",
+    "needsSteer": false,
+    "drivers": [],
+    "domainKpis": {
+      "schedule": { "spi": 1.05, "daysVariance": 7, "criticalPathItems": 0 },
+      "cost": { "cpi": 1.04, "contingencyDrawnPct": 6, "eacVarianceUsd": 350000 },
+      "safety": { "trir": 0.2, "recordables14d": 0, "openActions": 0 },
+      "change": { "openCount": 0, "pendingValueUsd": 0, "avgAgeDays": 0 }
+    }
+  },
+  {
+    "id": "brookside-water",
+    "name": "EXAMPLE — Brookside Water Plant",
+    "region": "West",
+    "businessUnit": "Utilities",
+    "health": "green",
+    "scheduleIndex": 0.99,
+    "costIndex": 0.97,
+    "criticalIssueCount": 0,
+    "lastUpdated": "2026-09-27T09:45:00Z",
+    "narrative": "Green overall. One low-severity cost watch — not a morning-scan escalate.",
+    "needsSteer": false,
+    "drivers": [
+      {
+        "domain": "cost",
+        "severity": "low",
+        "summary": "Chemical-skid quote 4% over allowance."
+      }
+    ],
+    "domainKpis": {
+      "schedule": { "spi": 0.99, "daysVariance": -1, "criticalPathItems": 1 },
+      "cost": { "cpi": 0.97, "contingencyDrawnPct": 15, "eacVarianceUsd": -180000 },
+      "safety": { "trir": 0.4, "recordables14d": 0, "openActions": 0 },
+      "change": { "openCount": 1, "pendingValueUsd": 120000, "avgAgeDays": 5 }
+    }
+  },
+  {
+    "id": "cedar-creek-substation",
+    "name": "EXAMPLE — Cedar Creek Substation",
+    "region": "Coastal",
+    "businessUnit": "Energy",
+    "health": "green",
+    "scheduleIndex": 1.01,
+    "costIndex": 1.0,
+    "criticalIssueCount": 0,
+    "lastUpdated": "2026-09-26T20:10:00Z",
+    "narrative": "On plan. Empty driver list is intentional — confirm empty states read as “no action,” not “missing data.”",
+    "needsSteer": false,
+    "drivers": [],
+    "domainKpis": {
+      "schedule": { "spi": 1.01, "daysVariance": 2, "criticalPathItems": 1 },
+      "cost": { "cpi": 1.0, "contingencyDrawnPct": 8, "eacVarianceUsd": 0 },
+      "safety": { "trir": 0.1, "recordables14d": 0, "openActions": 0 },
+      "change": { "openCount": 0, "pendingValueUsd": 0, "avgAgeDays": 0 }
+    }
+  }
+]

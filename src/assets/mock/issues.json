@@ -1,0 +1,191 @@
+[
+  {
+    "id": "iss-rb-01",
+    "projectId": "riverbend-interchange",
+    "domain": "schedule",
+    "title": "Utility relocation slipped 18 days",
+    "severity": "critical",
+    "ownerRole": "EXAMPLE — Project Controls",
+    "recommendedAction": "Escalate the utility owner delay to Thursday steer. Demand a night-shift recovery plan by 16:00 today.",
+    "updatedAt": "2026-09-28T06:15:00Z",
+    "timeline": [
+      { "at": "2026-09-10T12:00:00Z", "label": "Utility crew no-show; first 5-day slip logged." },
+      { "at": "2026-09-18T12:00:00Z", "label": "Second window missed; critical path now through drainage." },
+      { "at": "2026-09-27T18:00:00Z", "label": "Recovery calendar still unsigned by utility owner." }
+    ]
+  },
+  {
+    "id": "iss-rb-02",
+    "projectId": "riverbend-interchange",
+    "domain": "cost",
+    "title": "Contingency draw at 61% with unsigned COs",
+    "severity": "high",
+    "ownerRole": "EXAMPLE — Cost Lead",
+    "recommendedAction": "Review EAC variance (−$4.2M) and hold further contingency draws until CO-014/019 are commercially closed.",
+    "updatedAt": "2026-09-28T05:50:00Z",
+    "timeline": [
+      { "at": "2026-08-22T12:00:00Z", "label": "First owner-delay CO priced." },
+      { "at": "2026-09-20T12:00:00Z", "label": "Contingency crossed 50% without steer note." }
+    ]
+  },
+  {
+    "id": "iss-rb-03",
+    "projectId": "riverbend-interchange",
+    "domain": "change",
+    "title": "CO-014 owner delay unresolved",
+    "severity": "high",
+    "ownerRole": "EXAMPLE — Contracts",
+    "recommendedAction": "Acknowledge commercial blockage and assign a single owner to close CO-014 before the capital-review pack freezes.",
+    "updatedAt": "2026-09-27T22:10:00Z",
+    "timeline": [
+      { "at": "2026-09-02T12:00:00Z", "label": "CO-014 submitted." },
+      { "at": "2026-09-21T12:00:00Z", "label": "Owner legal still reviewing delay language." }
+    ]
+  },
+  {
+    "id": "iss-rb-04",
+    "projectId": "riverbend-interchange",
+    "domain": "schedule",
+    "title": "Night-shift productivity below recovery plan",
+    "severity": "medium",
+    "ownerRole": "EXAMPLE — Project Manager",
+    "recommendedAction": "Review crew mix with the superintendent; do not assume the 18-day slip heals without a new plan.",
+    "updatedAt": "2026-09-27T20:00:00Z",
+    "timeline": [
+      { "at": "2026-09-24T12:00:00Z", "label": "Night shift started; output 62% of plan." }
+    ]
+  },
+  {
+    "id": "iss-hp-01",
+    "projectId": "harbor-point-terminal",
+    "domain": "safety",
+    "title": "Recordable trend — 3 in 14 days",
+    "severity": "critical",
+    "ownerRole": "EXAMPLE — Safety Lead",
+    "recommendedAction": "Decide today whether the trend warrants a stop-work conversation with the marine contractor.",
+    "updatedAt": "2026-09-28T05:40:00Z",
+    "timeline": [
+      { "at": "2026-09-16T12:00:00Z", "label": "First recordable — hand injury on barge deck." },
+      { "at": "2026-09-22T12:00:00Z", "label": "Second recordable — slip on gangway." },
+      { "at": "2026-09-27T12:00:00Z", "label": "Third recordable — pinched finger during pile set." }
+    ]
+  },
+  {
+    "id": "iss-hp-02",
+    "projectId": "harbor-point-terminal",
+    "domain": "schedule",
+    "title": "Crane-barge weather window missed",
+    "severity": "high",
+    "ownerRole": "EXAMPLE — Project Controls",
+    "recommendedAction": "Escalate barge rebooking; quantify whether pile-driving can recover inside the season window.",
+    "updatedAt": "2026-09-27T16:25:00Z",
+    "timeline": [
+      { "at": "2026-09-25T12:00:00Z", "label": "Weather window closed; barge demobilized." }
+    ]
+  },
+  {
+    "id": "iss-hp-03",
+    "projectId": "harbor-point-terminal",
+    "domain": "safety",
+    "title": "Near-miss in pile-driving exclusion zone",
+    "severity": "high",
+    "ownerRole": "EXAMPLE — Safety Lead",
+    "recommendedAction": "Acknowledge the near-miss in the same conversation as the recordable trend — do not treat it as a separate later topic.",
+    "updatedAt": "2026-09-27T19:05:00Z",
+    "timeline": [
+      { "at": "2026-09-27T15:00:00Z", "label": "Crew member entered exclusion zone during hammer cycle." }
+    ]
+  },
+  {
+    "id": "iss-nh-01",
+    "projectId": "northridge-hospital",
+    "domain": "cost",
+    "title": "Contingency draw needs Cost Lead approval",
+    "severity": "high",
+    "ownerRole": "EXAMPLE — Cost Lead",
+    "recommendedAction": "Review variance and contingency. Flag for the PM if the cost story is not credible as written.",
+    "updatedAt": "2026-09-27T21:05:00Z",
+    "timeline": [
+      { "at": "2026-09-12T12:00:00Z", "label": "Fit-out package bid gap logged." },
+      { "at": "2026-09-26T12:00:00Z", "label": "PM requested contingency draw without Cost Lead flag." }
+    ]
+  },
+  {
+    "id": "iss-nh-02",
+    "projectId": "northridge-hospital",
+    "domain": "change",
+    "title": "Imaging-suite owner change still in pricing",
+    "severity": "medium",
+    "ownerRole": "EXAMPLE — Contracts",
+    "recommendedAction": "Review whether this change is already inside the contingency draw story — if yes, say so on the Cost tab.",
+    "updatedAt": "2026-09-26T17:40:00Z",
+    "timeline": [
+      { "at": "2026-09-15T12:00:00Z", "label": "Owner requested room reconfiguration." }
+    ]
+  },
+  {
+    "id": "iss-ov-01",
+    "projectId": "oak-valley-dc",
+    "domain": "schedule",
+    "title": "Switchgear long-lead threatens commissioning",
+    "severity": "medium",
+    "ownerRole": "EXAMPLE — Project Manager",
+    "recommendedAction": "Review a resequence of commissioning vs. accepting an 11-day slip. Cost is not the constraint.",
+    "updatedAt": "2026-09-28T04:10:00Z",
+    "timeline": [
+      { "at": "2026-09-08T12:00:00Z", "label": "Vendor pushed ship date." }
+    ]
+  },
+  {
+    "id": "iss-ov-02",
+    "projectId": "oak-valley-dc",
+    "domain": "change",
+    "title": "Owner-requested cooling upgrade in pricing",
+    "severity": "low",
+    "ownerRole": "EXAMPLE — Contracts",
+    "recommendedAction": "Acknowledge and keep it off the morning escalate list unless pricing lands above allowance.",
+    "updatedAt": "2026-09-25T14:00:00Z",
+    "timeline": [
+      { "at": "2026-09-19T12:00:00Z", "label": "Owner issued cooling upgrade request." }
+    ]
+  },
+  {
+    "id": "iss-mt-01",
+    "projectId": "midtown-transit",
+    "domain": "change",
+    "title": "Rail-operator interface package unsigned",
+    "severity": "medium",
+    "ownerRole": "EXAMPLE — Project Manager",
+    "recommendedAction": "Escalate the third-party signature path before shortened possessions hit next month.",
+    "updatedAt": "2026-09-27T18:30:00Z",
+    "timeline": [
+      { "at": "2026-09-11T12:00:00Z", "label": "Interface package sent to rail operator." }
+    ]
+  },
+  {
+    "id": "iss-mt-02",
+    "projectId": "midtown-transit",
+    "domain": "schedule",
+    "title": "Night possession windows shortened",
+    "severity": "low",
+    "ownerRole": "EXAMPLE — Project Controls",
+    "recommendedAction": "Review next-month calendar; do not escalate unless the interface package also slips.",
+    "updatedAt": "2026-09-26T11:15:00Z",
+    "timeline": [
+      { "at": "2026-09-20T12:00:00Z", "label": "Operator published reduced possessions." }
+    ]
+  },
+  {
+    "id": "iss-bw-01",
+    "projectId": "brookside-water",
+    "domain": "cost",
+    "title": "Chemical-skid quote 4% over allowance",
+    "severity": "low",
+    "ownerRole": "EXAMPLE — Cost Lead",
+    "recommendedAction": "Acknowledge. Not a portfolio escalate — watch only.",
+    "updatedAt": "2026-09-27T09:45:00Z",
+    "timeline": [
+      { "at": "2026-09-23T12:00:00Z", "label": "Vendor quote received." }
+    ]
+  }
+]

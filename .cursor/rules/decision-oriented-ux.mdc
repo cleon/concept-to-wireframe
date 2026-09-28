@@ -1,0 +1,15 @@
+---
+description: Decision-oriented UX over marketing polish
+alwaysApply: true
+---
+
+# Decision-oriented UX
+
+Optimize for a Portfolio Director or PM finishing J1–J3, not for a landing page.
+
+- Lead with decision verbs: escalate, review, acknowledge, flag, mark needs steer.
+- Portfolio must answer “which 1–3 projects get attention today?” in one scan (rank + filters).
+- Two clicks from a red row to *why* (drivers / issue detail).
+- Implement empty states when a domain has no issues.
+- Desktop-first (1280+), dense tables and KPI strips. Do not add illustration-heavy chrome.
+- Session-only controls (`needsSteer`, cost review flag) must say they do not persist.

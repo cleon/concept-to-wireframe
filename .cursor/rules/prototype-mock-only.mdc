@@ -1,0 +1,15 @@
+---
+description: Mock-only prototype — no live APIs, secrets, or production URLs
+alwaysApply: true
+---
+
+# Prototype is mock-only
+
+This repository is a **DEMO** Angular wireframe. Treat every change as disposable-looking but contract-faithful stub work.
+
+- Load data from `src/assets/mock/` or in-repo fixtures. Do not add HTTP clients to customer, ERP, P6, EHS, or warehouse hosts.
+- No secrets, tokens, SSO, or production URLs in code, docs, env files, or Automations.
+- No real employee, customer, or PHI. Use `EXAMPLE —` role labels and fictional site names.
+- Keep the DEMO / mock-data banner visible on primary routes.
+- If a screen has no stub, ship an empty/error state — do not invent a live fetch to fill it.
+- Deferred journeys (J4–J6) stay documentation-only.
