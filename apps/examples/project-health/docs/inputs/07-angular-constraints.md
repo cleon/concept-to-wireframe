@@ -7,4 +7,4 @@
 - **Auth:** None (prototype banner explains)
 - **Accessibility bar:** Keyboard nav for primary flows; visible focus; semantic headings
 - **Quality:** `ng build` succeeds; `ng serve` runs for Cloud Agent preview
-- **Docs in repo:** README with how to run; link to input docs and Cursor components doc
+- **Docs in repo:** README with how to run; link to this folder and `framework/cursor-components.md`

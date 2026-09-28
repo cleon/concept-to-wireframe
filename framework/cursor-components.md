@@ -1,10 +1,10 @@
-# Cursor components for repeatable concept→wireframe prototypes (DEMO REFERENCE)
+# Cursor components for repeatable concept→wireframe prototypes
 
 **Audience:** Field engineers and customer champions  
 **Surfaces in this evaluation pattern:** Agents Window, Cloud Agents, Automations  
 **Out of scope for the live eval narrative:** Classic Cursor IDE workflows (do not demo)
 
-This document lists the Cursor building blocks a team should standardize so Project Health–style prototypes (and other concepts) can be regenerated quickly.
+This document lists the Cursor building blocks a team should standardize so **any** concept can become a clickable Angular mock wireframe quickly. The Project Health Command Hub under `apps/examples/project-health/` is one worked example — not the only shape.
 
 ---
 
@@ -39,7 +39,7 @@ This document lists the Cursor building blocks a team should standardize so Proj
 | Example Automation | Trigger | Purpose |
 | --- | --- | --- |
 | Prototype PR review | PR opened/pushed on wireframe repo | Check mock-data rules, no live API URLs, Angular build instructions present |
-| Feasibility digest | Schedule (e.g. daily during eval) | Summarize open feasibility questions from docs + PR comments |
+| Feasibility digest | Schedule (e.g. daily during eval) | Summarize open feasibility questions from the current app’s docs + PR comments |
 | Walkthrough feedback triage | Slack message in eval channel | Cluster notes into decision-log bullets |
 | Non-goals reminder | Weekly schedule | Post “still mock / not production” reminder to avoid scope creep |
 
@@ -55,10 +55,10 @@ These live in the repository so **every** Cloud Agent / Automation run inherits 
 
 Recommended rules for this pattern:
 
-1. **`prototype-mock-only.mdc`** — Never add live API clients, real credentials, or production URLs. All data from `/src/assets/mock` (or equivalent). Banner must say DEMO.
+1. **`prototype-mock-only.mdc`** — Never add live API clients, real credentials, or production URLs. All data from the current app’s `src/assets/mock` (or equivalent). Banner must say DEMO.
 2. **`decision-oriented-ux.mdc`** — Prefer decision verbs and journey completion over visual polish; implement empty/error states for stub gaps.
-3. **`angular-wireframe.mdc`** — Standalone Angular, routing conventions (`/portfolio`, `/projects/:id`), accessibility baseline, `ng build` must pass.
-4. **`docs-sync.mdc`** — When journeys change, update `docs/inputs/` and feasibility notes in the same PR when practical.
+3. **`angular-wireframe.mdc`** — Standalone Angular, routes from the current flow spec / IA, accessibility baseline, `ng build` must pass.
+4. **`docs-sync.mdc`** — When journeys change, update `apps/<slug>/docs/` (flows + inputs) in the same PR when practical.
 
 ### 4.2 Skills (`.cursor/skills/*/SKILL.md`)
 
@@ -66,9 +66,9 @@ Repo skills Cloud Agents can invoke (or that humans reference by name in Agents 
 
 | Skill | When to use |
 | --- | --- |
-| **`intake-to-journeys`** | Turn `docs/inputs/*` into ranked journey markdown + deferred list |
+| **`intake-to-journeys`** | Turn the current app’s `docs/inputs/*` (or example defaults) into ranked journey markdown + deferred list |
 | **`prototype-brief`** | Lock scope, mock contracts, DoD before coding |
-| **`angular-wireframe-scaffold`** | Generate/update the clickable Angular hub from brief + fixtures |
+| **`angular-wireframe-scaffold`** | Generate/update the clickable Angular hub under `apps/<slug>/` from brief + fixtures |
 | **`feasibility-readout`** | After walkthrough notes, produce feasibility briefing |
 | **`handoff-brief`** | Package validated learning for a future production build |
 
@@ -94,7 +94,7 @@ Lightweight guardrails for Cloud Agent shell/edit loops:
 | --- | --- |
 | **beforeShellExecution** deny/warn on `curl`/`fetch` to unknown hosts during prototype phase | Keep mock-only discipline |
 | **afterFileEdit** remind if `environment.ts` gains API base URLs | Catch accidental live wiring |
-| **sessionStart** inject “read docs/inputs + rules” checklist | Reduce missed constraints |
+| **sessionStart** inject “read AGENTS.md + rules + current `apps/<slug>/`” checklist | Reduce missed constraints |
 
 Hooks are optional for a first demo; prioritize rules + skills first.
 
@@ -102,17 +102,17 @@ Hooks are optional for a first demo; prioritize rules + skills first.
 
 Short top-level instructions:
 
-- Purpose of repo (demo wireframe, mock data)
-- Where inputs live (`docs/inputs/`)
-- How to run (`npm start` / `ng serve`)
+- Purpose of repo (playbook + mock wireframes)
+- New apps live in `apps/<slug>/`; example is `apps/examples/project-health/`
+- How to run (`cd apps/<slug> && npm start` / `ng serve`)
 - Non-goals and ban on live integrations
-- Link to this components doc
+- Link to this components doc and `framework/prompts/00-main-intake.md`
 
 ---
 
 ## 5. Suggested Automations as code-adjacent assets
 
-Store Automation *prompts* in `docs/automations/` so they can be recreated in cursor.com/automations:
+Store Automation *prompts* in `framework/automations/` so they can be recreated in cursor.com/automations:
 
 - `pr-prototype-review.md`
 - `daily-feasibility-digest.md`
@@ -120,10 +120,10 @@ Store Automation *prompts* in `docs/automations/` so they can be recreated in cu
 
 ---
 
-## 6. What this demo should prove about productivity
+## 6. What this pattern should prove about productivity
 
-1. **Inputs in → Cloud Agent out:** filled intake docs become a clickable Angular hub without classic IDE time.
-2. **Rules/skills encode the pattern:** next concept reuses the same repo playbook with new `docs/inputs/`.
+1. **Inputs in → Cloud Agent out:** intake (interview or filled docs) becomes a clickable Angular hub without classic IDE time.
+2. **Rules/skills encode the pattern:** next concept reuses this playbook under a new `apps/<slug>/`. Never overwrite the example unless asked.
 3. **Automations keep the loop alive:** review and feasibility do not depend on a single hero session.
 4. **Prototype→build path is credible:** Angular structure + mock contracts are intentionally “real enough” to evolve.
 

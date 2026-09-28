@@ -10,21 +10,21 @@ Paste the prompt below into the Automation. The Automation should read the trigg
 
 ## Prompt
 
-A stakeholder just left walkthrough feedback on the **Project Health Command Hub** clickable wireframe (mock data only).
+A stakeholder just left walkthrough feedback on a **concept → Angular mock wireframe** (mock data only). Identify which `apps/<slug>/` (or the Project Health example) they mean.
 
 ### Cluster the notes into
 
 | Bucket | Include |
 | --- | --- |
-| **Decision moment** | Agree / disagree on escalate, needs-steer, cost flag, driver taxonomy |
-| **Journey friction** | Where J1–J3 stalled (filter, two-clicks-to-why, tab jump, empty state) |
-| **Feasibility** | Integration, health-rollup rules, join key, stub metric credibility |
-| **Out of scope** | Live APIs, J4–J6, SSO, mobile, BI replacement — log and do not implement |
+| **Decision moment** | Agree / disagree on the verbs and taxonomy the flow asks them to use |
+| **Journey friction** | Where a flow stalled (filter, two-clicks-to-why, tab jump, empty state) |
+| **Feasibility** | Integration, rollup rules, join key, stub metric credibility |
+| **Out of scope** | Live APIs, deferred journeys, SSO, mobile, BI replacement — log and do not implement |
 
 ### Output
 
 1. 5–10 decision-log bullets (verb first: *Keep*, *Change*, *Defer*, *Validate*).
-2. Map each bullet to J1, J2, J3, or Deferred.
+2. Map each bullet to a named flow or Deferred.
 3. If a change is wireframe-sized (copy, fixture, empty state, filter), propose a single Cloud Agent follow-up prompt.
 4. If the note asks for a live system, reply with the mock-only constraint and a fixture alternative.
 

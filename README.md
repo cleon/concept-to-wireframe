@@ -1,59 +1,58 @@
-# Project Health Command Hub — Demo Wireframe
+# Concept → Angular mock wireframe
 
-Clickable **Angular** hub for a construction portfolio morning scan. Fictional projects only. Not a customer system.
+Reusable **playbook** for turning a concept into a clickable Angular wireframe. Humans run this from Agents Window / [cursor.com/agents](https://cursor.com/agents) / [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
 
-This repo is the worked example of **intake docs → Cloud Agent → reviewable wireframe**. Humans operate from Agents Window / [cursor.com/agents](https://cursor.com/agents) / [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
+**Mock/stub only.** No live APIs, secrets, or production URLs. Keep the DEMO banner.
 
-**First prompt:** paste the block in [`docs/prompts/00-main-intake.md`](docs/prompts/00-main-intake.md) (or `@` that file). See [`docs/prompts/`](docs/prompts/). Mock/stub only.
+## How to use (fork → intake → app)
 
-## What this demo proves
+1. Fork this repo.
+2. In Agents Window / Cloud Agents, paste (or `@`) [`framework/prompts/00-main-intake.md`](framework/prompts/00-main-intake.md).
+3. The wireframe grows under **`apps/<slug>/`**, where `<slug>` is kebab-case from the working title (confirmed once in Phase A).
 
-1. Filled `docs/inputs/` become journeys J1–J3 without live integrations.
-2. Repo-local rules, skills, and Automation prompts make the pattern repeatable for the next concept.
-3. The Angular shell + mock contracts are real enough to walk decisions (escalate, needs-steer, cost flag) and hand off later.
+Do **not** write a new concept into [`apps/examples/project-health/`](apps/examples/project-health/) unless you explicitly say to extend that example.
 
-**Mock/stub only.** No ERP, P6, EHS, warehouse, auth, or production URLs.
+## What lives where
 
-## Run
+| Path | What it is |
+| --- | --- |
+| [`framework/`](framework/) | Reusable playbook only — prompts, blank intake templates, Automations, Cursor component guide |
+| [`framework/prompts/00-main-intake.md`](framework/prompts/00-main-intake.md) | First prompt to run |
+| [`apps/examples/project-health/`](apps/examples/project-health/) | **Worked example** — construction Project Health Command Hub (J1–J3) |
+| [`apps/<slug>/`](apps/) | Default home for a **new** customer wireframe |
+| [`apps/<slug>/docs/flows/`](apps/) | Flow specs for that wireframe |
+| [`.cursor/rules/`](.cursor/rules/) + [`.cursor/skills/`](.cursor/skills/) | Generic concept → Angular mock rules/skills (not example-specific) |
 
-Requires Node **22.12+** (this workspace uses Angular 21, the current line that installs on Node 22.14; Angular 22 needs Node 22.22.3+).
+## Run the example app
+
+Requires Node **22.12+** (Angular 21; Angular 22 needs Node 22.22.3+).
 
 ```bash
+cd apps/examples/project-health
 npm install
 npm start
 ```
 
-Equivalent: `npx ng serve`. Open the forwarded port (default `http://localhost:4200`).
-
-Production compile check:
+From repo root (after the example has `node_modules`):
 
 ```bash
+npm start
+```
+
+Equivalent: `npx ng serve` inside `apps/examples/project-health`. Open the forwarded port (default `http://localhost:4200`).
+
+Compile check:
+
+```bash
+cd apps/examples/project-health
 npx ng build
 ```
 
-## Journeys in the app
+See [`apps/examples/project-health/README.md`](apps/examples/project-health/README.md) for journeys and routes.
 
-| Route | Journey |
-| --- | --- |
-| `/portfolio` | J1 — ranked / filterable health list |
-| `/projects/:id` | J2 — overview, drivers, session-only **Needs steer** |
-| `/projects/:id/schedule` (also `cost`, `safety`, `change`) | J2 / J3 domain tabs |
-| `/projects/:id/issues/:issueId` | Driver detail + recommended action |
+## “Use Project Health example defaults”
 
-J4–J6 stay in `docs/inputs/03-priority-journeys.md`.
-
-10 fictional jobs (2 red, 3 amber, 5 green) live in `src/assets/mock/`. Names use `EXAMPLE —`. No real PII.
-
-Deep-link for the Cost Lead path (J3): `/projects/northridge-hospital/cost`.
-
-## Docs
-
-- First-run intake prompt: [`docs/prompts/00-main-intake.md`](docs/prompts/00-main-intake.md)
-- Intake examples (filled): [`docs/inputs/`](docs/inputs/)
-- Intake templates (blank): [`docs/inputs/templates/`](docs/inputs/templates/)
-- Cursor components (rules / skills / hooks / Automations): [`docs/10-cursor-components-for-repeatable-prototypes.md`](docs/10-cursor-components-for-repeatable-prototypes.md)
-- Agent playbook: [`AGENTS.md`](AGENTS.md)
-- Automation prompts: [`docs/automations/`](docs/automations/)
+If you say that in intake, the agent loads [`apps/examples/project-health/docs/inputs/`](apps/examples/project-health/docs/inputs/) and skips redundant questions. That still builds a **new** app under `apps/<slug>/` unless you explicitly extend the example.
 
 ## Optional hooks
 

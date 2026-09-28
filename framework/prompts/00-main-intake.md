@@ -6,6 +6,8 @@
 
 **Goal:** Interview one step at a time until one end-to-end flow is fully specified; offer to build and show that flow; optionally gather more flows; keep PR count low.
 
+**Store path:** New wireframes default to `apps/<slug>/`. Slug is kebab-case from the working title. Confirm once in Phase A. Do not ask a free-form “where should the repo / app live?” question.
+
 ---
 
 ## Prompt to paste
@@ -13,13 +15,21 @@
 ```text
 You are running the MAIN intake for this repo’s concept → Angular mock wireframe playbook.
 
-Read AGENTS.md, docs/inputs/ (as the shape of a complete intake), and any existing app under src/ before asking questions. Stay mock-data only. Keep the DEMO banner. Prefer decision-oriented UX over polish. Never call live customer systems or ask for secrets/PHI.
+Read AGENTS.md, framework/inputs/templates/ (intake shape), and framework/cursor-components.md before asking questions. Stay mock-data only. Keep the DEMO banner. Prefer decision-oriented UX over polish. Never call live customer systems or ask for secrets/PHI.
+
+### Where the app lives
+- Default path: apps/<slug>/  (slug = kebab-case of the working title).
+- Once in Phase A, after you have a title, ask exactly: “App folder will be `apps/<slug>/` — OK or different slug?”
+- Do not ask a free-form repo or folder location every time. Only the slug confirmation.
+- Flow specs: apps/<slug>/docs/flows/ (one markdown file per flow).
+- Never overwrite apps/examples/project-health/ when building a new concept unless I explicitly say to extend that example.
+- If I say “use Project Health example defaults” (or “use the Project Health demo defaults”), load apps/examples/project-health/docs/inputs/ and skip redundant questions for that topic. Still write the new app under apps/<slug>/ unless I explicitly say to extend the example.
+- Blank workshop forms: framework/inputs/templates/. Worked example: apps/examples/project-health/.
 
 ### How to talk to me
 - Ask ONE question per turn (or one tight cluster that is still a single decision). Wait for my answer before the next.
 - Prefer short plain language. Offer 2–4 concrete examples when a blank answer would stall.
 - Reflect back what you captured in one short sentence before moving on.
-- If I say “use the Project Health demo defaults” or “same as docs/inputs,” load those files and skip redundant questions for that topic.
 - If I paste a brief or meeting notes, extract what you can, confirm gaps only.
 
 ### Session rules (PR hygiene)
@@ -31,6 +41,7 @@ Read AGENTS.md, docs/inputs/ (as the shape of a complete intake), and any existi
 ### Phase A — Concept (once per session)
 Ask in order, one step at a time, until each is answered or deferred with a recorded default:
 1. Working title for the product/wireframe
+   → Derive <slug> (kebab-case). Ask: “App folder will be `apps/<slug>/` — OK or different slug?”
 2. One-sentence decision this hub must support (“Who decides what, how often?”)
 3. Problem today (what is fragmented / slow / invisible)
 4. Explicit non-goals for this prototype
@@ -38,7 +49,7 @@ Ask in order, one step at a time, until each is answered or deferred with a reco
 6. Angular / UX constraints that matter (or “use repo defaults”)
 7. Feasibility notes only if I volunteer source systems — map them for later; do NOT integrate live
 
-After Phase A, summarize in a short bullet list and confirm before Phase B.
+After Phase A, summarize in a short bullet list (include the confirmed apps/<slug>/ path) and confirm before Phase B.
 
 ### Phase B — One end-to-end flow (repeatable)
 For the current flow only, gather until you can implement it end-to-end with mocks:
@@ -47,7 +58,7 @@ For the current flow only, gather until you can implement it end-to-end with moc
 3. Happy path steps (screens/actions in order)
 4. Key empty, error, and edge states worth showing
 5. IA touch: routes/screens this flow needs (reuse existing hub IA when present)
-6. Mock data needed: entities, fields, health/status rules, sample records (fictional only)
+6. Mock data needed: entities, fields, status rules, sample records (fictional only)
 7. Out of scope for THIS flow
 
 Then write a compact Flow Spec (name, persona, steps, screens, mocks, out-of-scope) and ask me to confirm or correct it.
@@ -57,15 +68,15 @@ Ask exactly:
 “Want me to build this flow into the Angular mock wireframe and show you the running version?”
 
 If YES:
-1. Implement only what this flow needs (extend existing app if present; scaffold mock-only Angular if not).
-2. Persist the Flow Spec under docs/inputs/flows/ (one markdown file per flow) and update docs/inputs/03-priority-journeys.md (or equivalent index).
+1. Implement only what this flow needs under apps/<slug>/ (extend that app if present; scaffold mock-only Angular if not). Do not write into apps/examples/project-health/ unless I explicitly said to extend the example.
+2. Persist the Flow Spec under apps/<slug>/docs/flows/ (one markdown file per flow) and update apps/<slug>/docs/inputs/03-priority-journeys.md (or an equivalent index).
 3. Use the single session branch/PR (create if missing; otherwise push to the same PR).
-4. Prove it runs: npm install / build as needed, start the app in this environment, walk the flow in the browser, attach screenshots (and a short walkthrough video if easy).
-5. Reply with: PR URL, how to run locally (npm install && npm start), and what you verified.
-6. If a hosted preview/deploy path already exists in the repo, use it; otherwise prefer in-agent run + artifacts. Do not invent cloud credentials.
+4. Prove it runs: npm install / build as needed in apps/<slug>/, start the app in this environment, walk the flow in the browser, attach screenshots (and a short walkthrough video if easy).
+5. Reply with: PR URL, how to run locally (`cd apps/<slug> && npm install && npm start`), and what you verified.
+6. If a hosted preview/deploy path already exists in the repo, use it; otherwise prefer in-agent run + artifacts. Do not invent cloud credentials or a Render/hosting setup.
 
 If NO:
-Skip build for now; keep the Flow Spec in conversation (and offer to write docs/inputs/flows/… without app changes).
+Skip build for now; keep the Flow Spec in conversation (and offer to write apps/<slug>/docs/flows/… without app changes).
 
 ### Phase D — Another flow?
 Ask:
@@ -78,6 +89,7 @@ Ask:
 - No live APIs, no real customer data, no secrets in repo or chat.
 - Do not expand into a full product; wireframe fidelity only.
 - Do not require Cursor IDE; work for Agents Window / Cloud Agents.
+- Do not overwrite the Project Health example for a new concept.
 ```
 
 ---
@@ -86,9 +98,9 @@ Ask:
 
 | Stage | What good looks like |
 | --- | --- |
-| Phase A | Decision sentence + personas + non-goals locked |
+| Phase A | Decision sentence + personas + non-goals + confirmed `apps/<slug>/` |
 | Phase B | One Flow Spec a Cloud Agent can implement without guessing |
-| Phase C | Same PR updated; browser proof of the new flow |
+| Phase C | Same PR updated; browser proof of the new flow under `apps/<slug>/` |
 | Phase D | Clear stop or next flow — never silent sprawl |
 
-**Related:** `docs/inputs/` filled examples · `docs/inputs/templates/` blanks (manual/workshop) · this file is the agent path · `docs/10-cursor-components-for-repeatable-prototypes.md` · `AGENTS.md`
+**Related:** [`framework/inputs/templates/`](../inputs/templates/) blanks · [`apps/examples/project-health/docs/inputs/`](../../apps/examples/project-health/docs/inputs/) example defaults · [`framework/cursor-components.md`](../cursor-components.md) · [`AGENTS.md`](../../AGENTS.md)

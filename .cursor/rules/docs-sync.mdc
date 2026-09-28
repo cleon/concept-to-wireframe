@@ -1,18 +1,20 @@
 ---
-description: Keep docs/inputs in sync when journeys or scope change
+description: Keep the current app’s docs in sync when journeys or scope change
 alwaysApply: true
 ---
 
 # Docs sync
 
-When you change journeys, IA, mock contracts, or prototype scope, update the matching file under `docs/inputs/` in the same PR when practical.
+When you change journeys, IA, mock contracts, or prototype scope, update the matching files under the **current app** in the same PR when practical.
 
-| Change | Update |
+| Change | Update (under `apps/<slug>/` or the example if that is the app) |
 | --- | --- |
-| New / dropped journey | `03-priority-journeys.md` |
-| Screen or nav change | `04-ia-and-screens.md` |
-| Fixture shape | `05-mock-data-contracts.md` |
-| New feasibility finding | `08-feasibility-questions.md` |
-| Success bar change | `09-success-metrics.md` |
+| New / dropped flow | `docs/flows/` + journeys index (`docs/inputs/03-priority-journeys.md` or equivalent) |
+| Screen or nav change | `docs/inputs/04-ia-and-screens.md` |
+| Fixture shape | `docs/inputs/05-mock-data-contracts.md` |
+| New feasibility finding | `docs/inputs/08-feasibility-questions.md` |
+| Success bar change | `docs/inputs/09-success-metrics.md` |
 
-Do not silently promote deferred journeys (J4–J6) into the running app. Non-goals in `01-concept-brief.md` still apply.
+Do not silently promote deferred journeys into the running app. Non-goals in the concept brief still apply.
+
+New customer apps: `apps/<slug>/`. Example-only edits: `apps/examples/project-health/docs/`.
