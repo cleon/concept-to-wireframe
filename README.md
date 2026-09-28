@@ -1,8 +1,14 @@
 # Concept → Angular mock wireframe
 
+Repo: [cleon/concept-to-wireframe](https://github.com/cleon/concept-to-wireframe) (renamed from `cleon/project-health-command-hub-demo`; old URL redirects).
+
 Reusable **playbook** for turning a concept into a clickable Angular wireframe. Humans run this from Agents Window / [cursor.com/agents](https://cursor.com/agents) / [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
 
 **Mock/stub only.** No live APIs, secrets, or production URLs. Keep the DEMO banner.
+
+```bash
+git clone https://github.com/cleon/concept-to-wireframe.git
+```
 
 ## How to use (fork → intake → app)
 

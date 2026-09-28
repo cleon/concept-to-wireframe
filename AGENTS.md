@@ -1,5 +1,7 @@
 # AGENTS.md — concept → Angular mock wireframe
 
+Repo: [cleon/concept-to-wireframe](https://github.com/cleon/concept-to-wireframe).
+
 This repository is a **reusable playbook** plus a worked example. New wireframes are mock-data Angular apps. Humans dispatch work from **Agents Window**, [cursor.com/agents](https://cursor.com/agents), and [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
 
 **First prompt:** paste (or `@`) [`framework/prompts/00-main-intake.md`](framework/prompts/00-main-intake.md).
