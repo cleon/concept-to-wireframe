@@ -49,7 +49,8 @@ Deep-link for the Cost Lead path (J3): `/projects/northridge-hospital/cost`.
 ## Docs
 
 - First-run intake prompt: [`docs/prompts/00-main-intake.md`](docs/prompts/00-main-intake.md)
-- Intake package: [`docs/inputs/`](docs/inputs/)
+- Intake examples (filled): [`docs/inputs/`](docs/inputs/)
+- Intake templates (blank): [`docs/inputs/templates/`](docs/inputs/templates/)
 - Cursor components (rules / skills / hooks / Automations): [`docs/10-cursor-components-for-repeatable-prototypes.md`](docs/10-cursor-components-for-repeatable-prototypes.md)
 - Agent playbook: [`AGENTS.md`](AGENTS.md)
 - Automation prompts: [`docs/automations/`](docs/automations/)

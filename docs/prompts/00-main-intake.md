@@ -91,4 +91,4 @@ Ask:
 | Phase C | Same PR updated; browser proof of the new flow |
 | Phase D | Clear stop or next flow — never silent sprawl |
 
-**Related:** `docs/inputs/` example package · `docs/10-cursor-components-for-repeatable-prototypes.md` · `AGENTS.md`
+**Related:** `docs/inputs/` filled examples · `docs/inputs/templates/` blanks (manual/workshop) · this file is the agent path · `docs/10-cursor-components-for-repeatable-prototypes.md` · `AGENTS.md`

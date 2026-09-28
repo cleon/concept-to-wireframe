@@ -29,7 +29,8 @@ npm start
 | Path | Role |
 | --- | --- |
 | `docs/prompts/00-main-intake.md` | First prompt to run in Agents Window / Cloud Agents |
-| `docs/inputs/` | Example customer intake (concept, personas, J1–J3, IA, contracts) |
+| `docs/inputs/` | Filled example intake (concept, personas, J1–J3, IA, contracts) |
+| `docs/inputs/templates/` | Blank intake forms (workshop / offline); agent path is the main prompt |
 | `docs/automations/` | Paste-ready Automation prompts (PR review, daily digest, Slack triage) |
 | `docs/10-cursor-components-for-repeatable-prototypes.md` | Rules / skills / hooks / Automations pattern |
 | `.cursor/rules/` | Mock-only, decision UX, Angular conventions, docs-sync |
