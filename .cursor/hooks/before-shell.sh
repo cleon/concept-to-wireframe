@@ -29,7 +29,7 @@ if (looksLikeEgress && !allowlisted) {
       user_message:
         'This command looks like network egress. This prototype is mock-only — confirm it is not a live customer API.',
       agent_message:
-        'Prefer fixtures in src/assets/mock/. Do not add live API clients, secrets, or production URLs.',
+        'Prefer fixtures in the current app src/assets/mock/. Do not add live API clients, secrets, or production URLs.',
     }),
   );
 } else {

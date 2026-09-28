@@ -21,7 +21,7 @@ if (isEnvFile && hasRemoteUrl) {
   process.stdout.write(
     JSON.stringify({
       additional_context:
-        'environment.ts now looks like it contains a remote URL. This prototype is mock-only — remove live API base URLs and keep fixtures in src/assets/mock/.',
+        'environment.ts now looks like it contains a remote URL. This prototype is mock-only — remove live API base URLs and keep fixtures in the current app src/assets/mock/.',
     }),
   );
 }
