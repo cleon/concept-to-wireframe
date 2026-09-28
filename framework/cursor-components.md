@@ -1,6 +1,6 @@
 # Cursor components for repeatable concept→wireframe prototypes
 
-**Audience:** Field engineers and customer champions  
+**Audience:** Cursor users  
 **Surfaces in this evaluation pattern:** Agents Window, Cloud Agents, Automations  
 **Out of scope for the live eval narrative:** Classic Cursor IDE workflows (do not demo)
 
@@ -10,42 +10,54 @@ This document lists the Cursor building blocks a team should standardize so **an
 
 ## 1. Human orchestration surfaces
 
-| Component | Role in this pattern | Demo reference |
-| --- | --- | --- |
-| **Agents Window** | Primary place humans dispatch work, review diffs/PRs, preview forwarded ports, and steer Cloud Agents | https://cursor.com/docs/agent/agents-window |
-| **cursor.com/agents** | Same Cloud Agent fleet from web/mobile | Start / monitor Angular wireframe builds |
-| **cursor.com/automations** | Configure scheduled/event Automations without sitting in a session | Feasibility digests, PR review, Slack triage |
+
+| Component                  | Role in this pattern                                                                                  | Demo reference                                                                             |
+| -------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Agents Window**          | Primary place humans dispatch work, review diffs/PRs, preview forwarded ports, and steer Cloud Agents | [https://cursor.com/docs/agent/agents-window](https://cursor.com/docs/agent/agents-window) |
+| **cursor.com/agents**      | Same Cloud Agent fleet from web/mobile                                                                | Start / monitor Angular wireframe builds                                                   |
+| **cursor.com/automations** | Configure scheduled/event Automations without sitting in a session                                    | Feasibility digests, PR review, Slack triage                                               |
+
 
 ---
 
+
+
 ## 2. Cloud Agents (execution)
 
-| Capability | Why it matters for wireframes |
-| --- | --- |
-| Isolated VM + full dev environment | `ng serve` / build / browser verification without local IDE |
-| Branch + PR handoff | Reviewable prototype increments |
-| Artifacts / screenshots / desktop | PM walkthrough evidence |
-| MCP (team-configured) | Optional later for Jira/Confluence intake—not required for mock prototype |
+
+| Capability                                              | Why it matters for wireframes                                             |
+| ------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Isolated VM + full dev environment                      | `ng serve` / build / browser verification without local IDE               |
+| Branch + PR handoff                                     | Reviewable prototype increments                                           |
+| Artifacts / screenshots / desktop                       | PM walkthrough evidence                                                   |
+| MCP (team-configured)                                   | Optional later for Jira/Confluence intake—not required for mock prototype |
 | Environment setup (`.cursor/environment.json` / Builds) | Make Angular toolchain ready so agents do not waste turns installing Node |
 
-**Setup docs:** https://cursor.com/docs/cloud-agent · https://cursor.com/docs/cloud-agent/setup
+
+**Setup docs:** [https://cursor.com/docs/cloud-agent](https://cursor.com/docs/cloud-agent) · [https://cursor.com/docs/cloud-agent/setup](https://cursor.com/docs/cloud-agent/setup)
 
 **Repeatability tip:** Commit a known-good Cloud Agent environment for the prototype repo (Node version, `npm ci`, optional `ng serve` start) so every regeneration starts warm.
 
 ---
 
+
+
 ## 3. Automations (multipliers)
 
-| Example Automation | Trigger | Purpose |
-| --- | --- | --- |
-| Prototype PR review | PR opened/pushed on wireframe repo | Check mock-data rules, no live API URLs, Angular build instructions present |
-| Feasibility digest | Schedule (e.g. daily during eval) | Summarize open feasibility questions from the current app’s docs + PR comments |
-| Walkthrough feedback triage | Slack message in eval channel | Cluster notes into decision-log bullets |
-| Non-goals reminder | Weekly schedule | Post “still mock / not production” reminder to avoid scope creep |
 
-**Docs:** https://cursor.com/docs/cloud-agent/automations
+| Example Automation          | Trigger                            | Purpose                                                                        |
+| --------------------------- | ---------------------------------- | ------------------------------------------------------------------------------ |
+| Prototype PR review         | PR opened/pushed on wireframe repo | Check mock-data rules, no live API URLs, Angular build instructions present    |
+| Feasibility digest          | Schedule (e.g. daily during eval)  | Summarize open feasibility questions from the current app’s docs + PR comments |
+| Walkthrough feedback triage | Slack message in eval channel      | Cluster notes into decision-log bullets                                        |
+| Non-goals reminder          | Weekly schedule                    | Post “still mock / not production” reminder to avoid scope creep               |
+
+
+**Docs:** [https://cursor.com/docs/cloud-agent/automations](https://cursor.com/docs/cloud-agent/automations)
 
 ---
+
+
 
 ## 4. Repo-local agent configuration (commit these)
 
@@ -55,34 +67,42 @@ These live in the repository so **every** Cloud Agent / Automation run inherits 
 
 Recommended rules for this pattern:
 
-1. **`prototype-mock-only.mdc`** — Never add live API clients, real credentials, or production URLs. All data from the current app’s `src/assets/mock` (or equivalent). Banner must say DEMO.
-2. **`decision-oriented-ux.mdc`** — Prefer decision verbs and journey completion over visual polish; implement empty/error states for stub gaps.
-3. **`angular-wireframe.mdc`** — Standalone Angular, routes from the current flow spec / IA, accessibility baseline, `ng build` must pass.
-4. **`docs-sync.mdc`** — When journeys change, update `apps/<slug>/docs/` (flows + inputs) in the same PR when practical.
+1. `prototype-mock-only.mdc` — Never add live API clients, real credentials, or production URLs. All data from the current app’s `src/assets/mock` (or equivalent). Banner must say DEMO.
+2. `decision-oriented-ux.mdc` — Prefer decision verbs and journey completion over visual polish; implement empty/error states for stub gaps.
+3. `angular-wireframe.mdc` — Standalone Angular, routes from the current flow spec / IA, accessibility baseline, `ng build` must pass.
+4. `docs-sync.mdc` — When journeys change, update `apps/<slug>/docs/` (flows + inputs) in the same PR when practical.
+
+
 
 ### 4.2 Skills (`.cursor/skills/*/SKILL.md`)
 
 Repo skills Cloud Agents can invoke (or that humans reference by name in Agents Window):
 
-| Skill | When to use |
-| --- | --- |
-| **`intake-to-journeys`** | Turn the current app’s `docs/inputs/*` (or example defaults) into ranked journey markdown + deferred list |
-| **`prototype-brief`** | Lock scope, mock contracts, DoD before coding |
-| **`angular-wireframe-scaffold`** | Generate/update the clickable Angular hub under `apps/<slug>/` from brief + fixtures |
-| **`feasibility-readout`** | After walkthrough notes, produce feasibility briefing |
-| **`handoff-brief`** | Package validated learning for a future production build |
+
+| Skill                        | When to use                                                                                               |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `intake-to-journeys`         | Turn the current app’s `docs/inputs/*` (or example defaults) into ranked journey markdown + deferred list |
+| `prototype-brief`            | Lock scope, mock contracts, DoD before coding                                                             |
+| `angular-wireframe-scaffold` | Generate/update the clickable Angular hub under `apps/<slug>/` from brief + fixtures                      |
+| `feasibility-readout`        | After walkthrough notes, produce feasibility briefing                                                     |
+| `handoff-brief`              | Package validated learning for a future production build                                                  |
+
+
+
 
 ### 4.3 Commands / custom modes (optional but powerful)
 
 If the team uses slash/custom modes backed by skills:
 
-| Command / mode | Intent |
-| --- | --- |
-| `/intake` | Run intake-to-journeys skill |
-| `/brief` | Produce/refresh prototype brief |
-| `/wireframe` | Implement or extend Angular mock journeys |
-| `/feasibility` | Draft feasibility readout |
-| `/automate-eval` | Propose Automations for the eval week |
+
+| Command / mode   | Intent                                    |
+| ---------------- | ----------------------------------------- |
+| `/intake`        | Run intake-to-journeys skill              |
+| `/brief`         | Produce/refresh prototype brief           |
+| `/wireframe`     | Implement or extend Angular mock journeys |
+| `/feasibility`   | Draft feasibility readout                 |
+| `/automate-eval` | Propose Automations for the eval week     |
+
 
 (Exact slash UX depends on team configuration; document the *intent* even if names differ.)
 
@@ -90,11 +110,13 @@ If the team uses slash/custom modes backed by skills:
 
 Lightweight guardrails for Cloud Agent shell/edit loops:
 
-| Hook idea | Purpose |
-| --- | --- |
-| **beforeShellExecution** deny/warn on `curl`/`fetch` to unknown hosts during prototype phase | Keep mock-only discipline |
-| **afterFileEdit** remind if `environment.ts` gains API base URLs | Catch accidental live wiring |
-| **sessionStart** inject “read AGENTS.md + rules + current `apps/<slug>/`” checklist | Reduce missed constraints |
+
+| Hook idea                                                                                    | Purpose                      |
+| -------------------------------------------------------------------------------------------- | ---------------------------- |
+| **beforeShellExecution** deny/warn on `curl`/`fetch` to unknown hosts during prototype phase | Keep mock-only discipline    |
+| **afterFileEdit** remind if `environment.ts` gains API base URLs                             | Catch accidental live wiring |
+| **sessionStart** inject “read AGENTS.md + rules + current `apps/<slug>/`” checklist          | Reduce missed constraints    |
+
 
 Hooks are optional for a first demo; prioritize rules + skills first.
 
@@ -110,6 +132,8 @@ Short top-level instructions:
 
 ---
 
+
+
 ## 5. Suggested Automations as code-adjacent assets
 
 Store Automation *prompts* in `framework/automations/` so they can be recreated in cursor.com/automations:
@@ -120,6 +144,8 @@ Store Automation *prompts* in `framework/automations/` so they can be recreated 
 
 ---
 
+
+
 ## 6. What this pattern should prove about productivity
 
 1. **Inputs in → Cloud Agent out:** intake (interview or filled docs) becomes a clickable Angular hub without classic IDE time.
@@ -129,9 +155,12 @@ Store Automation *prompts* in `framework/automations/` so they can be recreated 
 
 ---
 
+
+
 ## 7. Official references
 
-- Agents Window: https://cursor.com/docs/agent/agents-window
-- Cloud Agents: https://cursor.com/docs/cloud-agent
-- Cloud agent setup: https://cursor.com/docs/cloud-agent/setup
-- Automations: https://cursor.com/docs/cloud-agent/automations
+- Agents Window: [https://cursor.com/docs/agent/agents-window](https://cursor.com/docs/agent/agents-window)
+- Cloud Agents: [https://cursor.com/docs/cloud-agent](https://cursor.com/docs/cloud-agent)
+- Cloud agent setup: [https://cursor.com/docs/cloud-agent/setup](https://cursor.com/docs/cloud-agent/setup)
+- Automations: [https://cursor.com/docs/cloud-agent/automations](https://cursor.com/docs/cloud-agent/automations)
+

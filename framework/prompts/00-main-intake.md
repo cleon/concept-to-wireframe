@@ -2,7 +2,7 @@
 
 **Who runs this:** First prompt in Agents Window / Cloud Agents on this repo. Paste the block under **Prompt to paste** (or `@` this file) and send it.
 
-**Audience:** Customer operators and Field Engineers evaluating Cursor for concept → clickable Angular wireframe. Surfaces in scope: Agents Window, Cloud Agents, Automations. Do not require or assume a classic IDE.
+**Audience:** Customer operators evaluating Cursor for concept → clickable Angular wireframe. Surfaces in scope: Agents Window, Cloud Agents, Automations. Do not require or assume a classic IDE.
 
 **Goal:** Interview one step at a time until one end-to-end flow is fully specified; offer to build and show that flow; optionally gather more flows; keep PR count low.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## Prompt to paste
+## Prompt to paste:
 
 ```text
 You are running the MAIN intake for this repo’s concept → Angular mock wireframe playbook.
@@ -94,13 +94,3 @@ Ask:
 
 ---
 
-## Operator notes (FE)
-
-| Stage | What good looks like |
-| --- | --- |
-| Phase A | Decision sentence + personas + non-goals + confirmed `apps/<slug>/` |
-| Phase B | One Flow Spec a Cloud Agent can implement without guessing |
-| Phase C | Same PR updated; browser proof of the new flow under `apps/<slug>/` |
-| Phase D | Clear stop or next flow — never silent sprawl |
-
-**Related:** [`framework/inputs/templates/`](../inputs/templates/) blanks · [`apps/examples/project-health/docs/inputs/`](../../apps/examples/project-health/docs/inputs/) example defaults · [`framework/cursor-components.md`](../cursor-components.md) · [`AGENTS.md`](../../AGENTS.md)

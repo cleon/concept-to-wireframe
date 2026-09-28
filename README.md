@@ -1,7 +1,5 @@
 # Concept → Angular mock wireframe
 
-Repo: [cleon/concept-to-wireframe](https://github.com/cleon/concept-to-wireframe) (renamed from `cleon/project-health-command-hub-demo`; old URL redirects).
-
 Reusable **playbook** for turning a concept into a clickable Angular wireframe. Humans run this from Agents Window / [cursor.com/agents](https://cursor.com/agents) / [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
 
 **Mock/stub only.** No live APIs, secrets, or production URLs. Keep the DEMO banner.
@@ -10,24 +8,30 @@ Reusable **playbook** for turning a concept into a clickable Angular wireframe. 
 git clone https://github.com/cleon/concept-to-wireframe.git
 ```
 
+
+
 ## How to use (fork → intake → app)
 
 1. Fork this repo.
-2. In Agents Window / Cloud Agents, paste (or `@`) [`framework/prompts/00-main-intake.md`](framework/prompts/00-main-intake.md).
-3. The wireframe grows under **`apps/<slug>/`**, where `<slug>` is kebab-case from the working title (confirmed once in Phase A).
+2. In Agents Window / Cloud Agents, paste (or `@`) `[framework/prompts/00-main-intake.md](framework/prompts/00-main-intake.md)`.
+3. The wireframe grows under `apps/<slug>/`, where `<slug>` is kebab-case from the working title (confirmed once in Phase A).
 
-Do **not** write a new concept into [`apps/examples/project-health/`](apps/examples/project-health/) unless you explicitly say to extend that example.
+Do **not** write a new concept into `[apps/examples/project-health/](apps/examples/project-health/)` unless you explicitly say to extend that example.
 
 ## What lives where
 
-| Path | What it is |
-| --- | --- |
-| [`framework/`](framework/) | Reusable playbook only — prompts, blank intake templates, Automations, Cursor component guide |
-| [`framework/prompts/00-main-intake.md`](framework/prompts/00-main-intake.md) | First prompt to run |
-| [`apps/examples/project-health/`](apps/examples/project-health/) | **Worked example** — construction Project Health Command Hub (J1–J3) |
-| [`apps/<slug>/`](apps/) | Default home for a **new** customer wireframe |
-| [`apps/<slug>/docs/flows/`](apps/) | Flow specs for that wireframe |
-| [`.cursor/rules/`](.cursor/rules/) + [`.cursor/skills/`](.cursor/skills/) | Generic concept → Angular mock rules/skills (not example-specific) |
+
+| Path                                                                         | What it is                                                                                    |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `[framework/](framework/)`                                                   | Reusable playbook only — prompts, blank intake templates, Automations, Cursor component guide |
+| `[framework/prompts/00-main-intake.md](framework/prompts/00-main-intake.md)` | First prompt to run                                                                           |
+| `[apps/examples/project-health/](apps/examples/project-health/)`             | **Worked example** — construction Project Health Command Hub (J1–J3)                          |
+| `[apps/<slug>/](apps/)`                                                      | Default home for a **new** customer wireframe                                                 |
+| `[apps/<slug>/docs/flows/](apps/)`                                           | Flow specs for that wireframe                                                                 |
+| `[.cursor/rules/](.cursor/rules/)` + `[.cursor/skills/](.cursor/skills/)`    | Generic concept → Angular mock rules/skills (not example-specific)                            |
+
+
+
 
 ## Run the example app
 
@@ -48,15 +52,15 @@ cd apps/examples/project-health
 npx ng build
 ```
 
-See [`apps/examples/project-health/README.md`](apps/examples/project-health/README.md) for journeys and routes.
+See `[apps/examples/project-health/README.md](apps/examples/project-health/README.md)` for journeys and routes.
 
 ## “Use Project Health example defaults”
 
-If you say that in intake, the agent loads [`apps/examples/project-health/docs/inputs/`](apps/examples/project-health/docs/inputs/) and skips redundant questions. That still builds a **new** app under `apps/<slug>/` unless you explicitly extend the example.
+If you say that in intake, the agent loads `[apps/examples/project-health/docs/inputs/](apps/examples/project-health/docs/inputs/)` and skips redundant questions. That still builds a **new** app under `apps/<slug>/` unless you explicitly extend the example.
 
 ## Optional hooks
 
-[`.cursor/hooks.json`](.cursor/hooks.json) is a lightweight guardrail:
+`[.cursor/hooks.json](.cursor/hooks.json)` is a lightweight guardrail:
 
 - `sessionStart` — inject the mock-only checklist (IDE / worker sessions)
 - `beforeShellExecution` — ask before `curl`/`wget` to non-toolchain hosts
