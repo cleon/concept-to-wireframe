@@ -63,7 +63,7 @@ import { DOMAINS, type Domain, type DriverIssue } from './mock/types';
             placeholder="Why this is on today’s list"
           />
         </label>
-        <p class="hint">Client-only. Refresh clears the note; the toggle stays in this tab session.</p>
+        <p class="hint">Session only — in-app navigation keeps this state; a full refresh reloads fixtures.</p>
       </section>
 
       @if (costFlag()) {
