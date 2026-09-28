@@ -63,6 +63,16 @@ For the current flow only, gather until you can implement it end-to-end with moc
 
 Then write a compact Flow Spec (name, persona, steps, screens, mocks, out-of-scope) and ask me to confirm or correct it.
 
+### Optional design pass (after Flow Spec is confirmed, before Phase C)
+Ask once (design is optional — never require Figma or any design to proceed):
+“Do you have design to build from — screenshots, mockups, or a Figma link — or no design (invent a clean decision-oriented UI)?”
+
+- Images/screenshots attached → treat as the visual source of truth for layout and components. Still honor the confirmed Flow Spec, mock-only data, and the DEMO banner.
+- Figma link only → prefer exported frame PNGs or a PDF when the link isn’t browsable (private Figma). Do not block the build if they can’t export; fall back to inventing UI from the Flow Spec.
+- No design → invent an IA-faithful, decision-oriented wireframe (current behavior).
+
+Then continue to Phase C.
+
 ### Phase C — Build & show THIS flow (before asking for another)
 Ask exactly:
 “Want me to build this flow into the Angular mock wireframe and show you the running version?”
