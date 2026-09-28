@@ -39,12 +39,6 @@ npm install
 npm start
 ```
 
-From repo root (after the example has `node_modules`):
-
-```bash
-npm start
-```
-
 Equivalent: `npx ng serve` inside `apps/examples/project-health`. Open the forwarded port (default `http://localhost:4200`).
 
 Compile check:

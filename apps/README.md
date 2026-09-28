@@ -8,3 +8,5 @@
 Slug comes from the working title (kebab-case), confirmed once in Phase A of [`framework/prompts/00-main-intake.md`](../framework/prompts/00-main-intake.md).
 
 Flow specs: `apps/<slug>/docs/flows/`.
+
+Run any wireframe from its app folder: `cd apps/<path> && npm install && npm start`. Shared Prettier config: [`.prettierrc`](.prettierrc) (applies to all apps under `apps/`).

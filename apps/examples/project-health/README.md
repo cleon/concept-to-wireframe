@@ -20,8 +20,6 @@ Equivalent: `npx ng serve`. Open the forwarded port (default `http://localhost:4
 npx ng build
 ```
 
-From repo root (after this folder has `node_modules`): `npm start` / `npm run build`.
-
 ## Journeys in the app
 
 | Route | Journey |
