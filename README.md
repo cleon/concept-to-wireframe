@@ -1,34 +1,30 @@
 # Concept → Angular mock wireframe
 
-Reusable **playbook** for turning a concept into a clickable Angular wireframe. Humans run this from Agents Window / [cursor.com/agents](https://cursor.com/agents) / [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
+This is a reusable **playbook** for turning a concept into a clickable Angular wireframe. Humans run this from Agents Window / [cursor.com/agents](https://cursor.com/agents) / [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
 
-**Mock/stub only.** No live APIs, secrets, or production URLs. Keep the DEMO banner.
+**This tool creates mocks/stubs only.** No live APIs, secrets, or production URLs.
 
 ```bash
 git clone https://github.com/cleon/concept-to-wireframe.git
 ```
 
-
-
 ## How to use (fork → intake → app)
 
 1. Fork this repo.
 2. In Agents Window / Cloud Agents, paste (or `@`) `[framework/prompts/00-main-intake.md](framework/prompts/00-main-intake.md)`.
-3. The wireframe grows under `apps/<slug>/`, where `<slug>` is kebab-case from the working title (confirmed once in Phase A).
-
-Do **not** write a new concept into `[apps/examples/project-health/](apps/examples/project-health/)` unless you explicitly say to extend that example.
+3. The wireframe grows under `apps/<your-wireframe>/`, where `<your-wireframe>` is the name from the working title.
 
 ## What lives where
 
 
-| Path                                                                         | What it is                                                                                    |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `[framework/](framework/)`                                                   | Reusable playbook only — prompts, blank intake templates, Automations, Cursor component guide |
-| `[framework/prompts/00-main-intake.md](framework/prompts/00-main-intake.md)` | First prompt to run                                                                           |
-| `[apps/examples/project-health/](apps/examples/project-health/)`             | **Worked example** — construction Project Health Command Hub (J1–J3)                          |
-| `[apps/<slug>/](apps/)`                                                      | Default home for a **new** customer wireframe                                                 |
-| `[apps/<slug>/docs/flows/](apps/)`                                           | Flow specs for that wireframe                                                                 |
-| `[.cursor/rules/](.cursor/rules/)` + `[.cursor/skills/](.cursor/skills/)`    | Generic concept → Angular mock rules/skills (not example-specific)                            |
+| Path                                                                         | What it is                                                                                                 |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `[framework/](framework/)`                                                   | Contains the reusable playbook only — prompts, blank intake templates, Automations, Cursor component guide |
+| `[framework/prompts/00-main-intake.md](framework/prompts/00-main-intake.md)` | First prompt to run                                                                                        |
+| `[apps/examples/project-health/](apps/examples/project-health/)`             | **Worked example** — construction Project Health Command Hub (J1–J3)                                       |
+| `[apps/<slug>/](apps/)`                                                      | Default home for a **new** customer wireframe                                                              |
+| `[apps/<slug>/docs/flows/](apps/)`                                           | Flow specs for that wireframe                                                                              |
+| `[.cursor/rules/](.cursor/rules/)` + `[.cursor/skills/](.cursor/skills/)`    | Generic concept → Angular mock rules/skills (not example-specific)                                         |
 
 
 
