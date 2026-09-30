@@ -1,5 +1,8 @@
 {
-  // For more information, visit: https://angular.dev/ai/mcp
+  // Angular CLI MCP ships with this playbook (default wireframe stack).
+  // Figma MCP is optional and per Cursor user — do not put secrets here.
+  // See framework/mcp-setup.md
+  // For more information: https://angular.dev/ai/mcp
   "servers": {
     "angular-cli": {
       "command": "npx",

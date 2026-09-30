@@ -42,3 +42,6 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Local / WIP apps (example under apps/examples/ stays tracked if already committed)
+apps/*

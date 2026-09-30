@@ -11,7 +11,7 @@ A human dropped or updated intake for a concept and wants a ranked prototype set
 
 ## Do
 
-1. Read the current app’s `docs/inputs/00-README.md` through `03-priority-journeys.md`, plus personas and the concept brief. If they said “use Project Health example defaults,” read `apps/examples/project-health/docs/inputs/` instead.
+1. Read the current app’s `docs/inputs/00-README.md` through `03-priority-journeys.md`, plus personas, the concept brief, and frontend constraints / stack when present. If they said “use Project Health example defaults,” read `apps/examples/project-health/docs/inputs/` instead (that example is Angular; do not change stack here).
 2. List candidate journeys as **Trigger → steps → Decision → Good enough**.
 3. Rank three for the wireframe (P0/P1). Everything else goes under **Deferred**.
 4. Check each in-app journey against IA (`04-ia-and-screens.md`). Note screen gaps.

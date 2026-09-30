@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Prototype is mock-only
 
-This repository produces **DEMO** Angular wireframes. Treat every change as disposable-looking but contract-faithful stub work.
+This repository produces **DEMO** mock wireframes (stack chosen at intake). Treat every change as disposable-looking but contract-faithful stub work.
 
 - Load data from the current app’s `src/assets/mock/` (or in-repo fixtures). Do not add HTTP clients to customer or production hosts.
 - No secrets, tokens, SSO, or production URLs in code, docs, env files, or Automations.

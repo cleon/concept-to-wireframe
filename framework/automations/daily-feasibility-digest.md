@@ -10,7 +10,7 @@ Paste the prompt below into the Automation.
 
 ## Prompt
 
-Produce a short **feasibility digest** for the current Angular mock wireframe(s) in this repo.
+Produce a short **feasibility digest** for the current mock wireframe(s) in this repo.
 
 Read, for each app under `apps/` that has intake docs (including `apps/examples/project-health/` if that is in play):
 

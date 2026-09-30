@@ -2,7 +2,7 @@
 
 **Recreate in:** [cursor.com/automations](https://cursor.com/automations)  
 **Trigger:** Pull request opened or pushed on this wireframe repo  
-**Purpose:** Enforce mock-only discipline and a reviewable Angular hub before humans walk journeys.
+**Purpose:** Enforce mock-only discipline and a reviewable mock hub before humans walk journeys.
 
 Paste the prompt below into the Automation. Do not add live API credentials to the Automation config.
 
@@ -10,7 +10,7 @@ Paste the prompt below into the Automation. Do not add live API credentials to t
 
 ## Prompt
 
-You are reviewing a **concept → Angular mock wireframe** PR. Humans operate via Agents Window / Cloud Agents — do not assume a classic IDE.
+You are reviewing a **concept → mock wireframe** PR. Humans operate via Agents Window / Cloud Agents — do not assume a classic IDE.
 
 Read `AGENTS.md`, `.cursor/rules/`, `framework/cursor-components.md`, and this PR’s diff. Identify which app changed (`apps/<slug>/` or the example `apps/examples/project-health/`).
 

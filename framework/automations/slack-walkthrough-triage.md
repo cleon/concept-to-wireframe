@@ -10,7 +10,7 @@ Paste the prompt below into the Automation. The Automation should read the trigg
 
 ## Prompt
 
-A stakeholder just left walkthrough feedback on a **concept → Angular mock wireframe** (mock data only). Identify which `apps/<slug>/` (or the Project Health example) they mean.
+A stakeholder just left walkthrough feedback on a **concept → mock wireframe** (mock data only). Identify which `apps/<slug>/` (or the Project Health Angular example) they mean.
 
 ### Cluster the notes into
 

@@ -1,0 +1,15 @@
+---
+description: Mock wireframe conventions (stack-agnostic)
+alwaysApply: true
+---
+
+# Mock wireframe
+
+- Stack comes from the current app’s `docs/inputs/07-frontend-constraints.md` (or Phase A intake). **Default stack is Angular (latest)** when intake does not name another. Supported presets: Angular, Vanilla JS, React + TypeScript, or a validated Other.
+- SPA (or equivalent) with client-side routing from the current app’s flow spec / IA (`apps/<slug>/docs/`). Do not copy the example’s `/portfolio` table unless that is the concept.
+- Client-side state only. Session flags are in-memory and must say they do not persist.
+- Accessibility baseline: semantic headings, labeled filters, visible `:focus-visible`, keyboard-reachable primary actions.
+- Production build for the chosen stack must succeed in the app you are changing. `npm start` (or the documented run command) is the preview path for Cloud Agents.
+- Keep fixtures aligned with that app’s mock-data contract (`docs/inputs/05-mock-data-contracts.md` or equivalent). Fixtures under `src/assets/mock/` or `public/mock/`.
+- Keep the DEMO / mock-data banner visible on primary routes.
+- Scaffold new apps at `apps/<slug>/`. Never overwrite `apps/examples/project-health/` unless the user explicitly extends that example. Project Health is the Angular worked example only.

@@ -1,8 +1,8 @@
-# AGENTS.md — concept → Angular mock wireframe
+# AGENTS.md — concept → mock wireframe
 
 Repo: [cleon/concept-to-wireframe](https://github.com/cleon/concept-to-wireframe).
 
-This repository is a **reusable playbook** plus a worked example. New wireframes are mock-data Angular apps. Humans dispatch work from **Agents Window**, [cursor.com/agents](https://cursor.com/agents), and [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
+This repository is a **reusable playbook** plus a worked example. New wireframes are mock-data browser apps. Stack is chosen at intake; **Angular (latest) is the default** (this repo ships Angular CLI MCP in `.vscode/mcp.json`). Alternatives: Vanilla JS, React + TypeScript, or a validated Other. Humans dispatch work from **Agents Window**, [cursor.com/agents](https://cursor.com/agents), and [cursor.com/automations](https://cursor.com/automations). A classic IDE is not required.
 
 **First prompt:** paste (or `@`) [`framework/prompts/00-main-intake.md`](framework/prompts/00-main-intake.md).
 
@@ -16,7 +16,13 @@ This repository is a **reusable playbook** plus a worked example. New wireframes
 - Flow specs live at `apps/<slug>/docs/flows/`
 - One branch / one PR per session by default (see the main intake prompt)
 
+## MCP (per fork / Cursor user)
+
+Forks do **not** inherit another user’s MCP or Figma auth. See [`framework/mcp-setup.md`](framework/mcp-setup.md): Angular CLI MCP ships in-repo; Figma MCP is optional for design links and must be enabled by the person running Cursor.
+
 ## How to run the example
+
+Project Health is the **Angular** worked example:
 
 ```bash
 cd apps/examples/project-health
@@ -25,7 +31,7 @@ npm start
 # or: npx ng serve
 ```
 
-`ng build` must succeed for the app you are changing. Preview the forwarded port; desktop-first (1280+).
+For any app you change, the production build for its stack must succeed (`ng build`, `npm run build`, etc.). Preview the forwarded port; desktop-first (1280+).
 
 ## Layout
 
@@ -35,12 +41,14 @@ npm start
 | `framework/inputs/templates/` | Blank intake forms (workshop / offline) |
 | `framework/automations/` | Paste-ready Automation prompts |
 | `framework/cursor-components.md` | Rules / skills / hooks / Automations pattern |
-| `apps/examples/project-health/` | Worked example app + filled intake |
+| `framework/mcp-setup.md` | Angular CLI MCP (ships) + optional Figma MCP for forks |
+| `apps/examples/project-health/` | Worked **Angular** example app + filled intake |
 | `apps/examples/project-health/docs/inputs/` | Example defaults (“use Project Health example defaults”) |
-| `apps/<slug>/` | New customer wireframe |
+| `apps/<slug>/` | New customer wireframe (stack from intake) |
 | `apps/<slug>/docs/flows/` | Flow specs for that wireframe |
-| `.cursor/rules/` | Mock-only, decision UX, Angular conventions, docs-sync |
-| `.cursor/skills/` | `intake-to-journeys`, `prototype-brief`, `angular-wireframe-scaffold`, `feasibility-readout`, `handoff-brief` |
+| `.cursor/rules/` | Mock-only, decision UX, mock-wireframe conventions, docs-sync |
+| `.cursor/skills/` | `intake-to-journeys`, `prototype-brief`, `wireframe-scaffold`, `flow-visualizer`, `feasibility-readout`, `handoff-brief` |
+| `framework/flow-visualizer/` | Animated HTML flowchart builder (overview + one page per flow) |
 | `.cursor/hooks.json` | Optional prototype guardrails (see README) |
 
 ## Commands (intent)
@@ -49,7 +57,8 @@ npm start
 | --- | --- |
 | `/intake` | `intake-to-journeys` |
 | `/brief` | `prototype-brief` |
-| `/wireframe` | `angular-wireframe-scaffold` |
+| `/wireframe` | `wireframe-scaffold` |
+| `/flows` | `flow-visualizer` |
 | `/feasibility` | `feasibility-readout` |
 | `/handoff` | `handoff-brief` |
 

@@ -10,6 +10,7 @@ Filled intake: [`docs/inputs/`](docs/inputs/). Playbook: [`framework/`](../../..
 - Keep the DEMO / mock-data banner visible
 - Implement journeys **J1–J3** only; J4–J6 stay in `docs/inputs/`
 - Update `docs/inputs/` when journeys or mock contracts change
+- Animated playback of J1–J3 lives in `docs/flows/visualizer/` (not a substitute for the Angular routes)
 
 ## Routes
 

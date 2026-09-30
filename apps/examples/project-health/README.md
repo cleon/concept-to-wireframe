@@ -36,3 +36,16 @@ J4–J6 stay in [`docs/inputs/03-priority-journeys.md`](docs/inputs/03-priority-
 Deep-link for the Cost Lead path (J3): `/projects/northridge-hospital/cost`.
 
 Filled intake: [`docs/inputs/`](docs/inputs/).
+
+## Animated flowcharts
+
+Open these in a browser (offline, no server). They play J1–J3. Space pauses. They are not the Angular app.
+
+| File | What it shows |
+| --- | --- |
+| [`docs/flows/visualizer/overview.html`](docs/flows/visualizer/overview.html) | Main process across J1, J2, and J3 |
+| [`docs/flows/visualizer/j1-portfolio-scan.html`](docs/flows/visualizer/j1-portfolio-scan.html) | Portfolio morning scan |
+| [`docs/flows/visualizer/j2-why-red.html`](docs/flows/visualizer/j2-why-red.html) | Why a project is red |
+| [`docs/flows/visualizer/j3-cost-review.html`](docs/flows/visualizer/j3-cost-review.html) | Cost lead review |
+
+Rebuild from the JSON with `python3 framework/flow-visualizer/build.py`.
